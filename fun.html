@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fun Zone 😂</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<a href="index.html">Home 🏠</a>
+<a href="letter.html">Letter 💌</a>
+<a href="fun.html">Fun Zone 😂</a>
+<a href="friendship.html">Friendship 💖</a>
+<a href="surprise.html">Final Surprise 🎁</a>
+</nav>
+
+<main>
+<section class="hero">
+<div style="font-size:75px">😂</div>
+<h1 class="script">Welcome to Fun Zone!</h1>
+<p>Shalu, tap a card. No boring stuff allowed!</p>
+</section>
+
+<div class="grid">
+<div class="tile center" onclick="reveal('joke1')">
+<div class="emoji">🤭</div>
+<h2>Secret #1</h2>
+<p>Tap to reveal</p>
+<div class="secret" id="joke1">
+Official notice: Smiling is compulsory today! 😁
+</div>
+</div>
+
+<div class="tile center" onclick="reveal('joke2')">
+<div class="emoji">😎</div>
+<h2>Secret #2</h2>
+<p>Tap to reveal</p>
+<div class="secret" id="joke2">
+Warning: Too much awesomeness detected. 😂
+</div>
+</div>
+
+<div class="tile center" onclick="reveal('joke3')">
+<div class="emoji">🫣</div>
+<h2>Secret #3</h2>
+<p>Tap to reveal</p>
+<div class="secret" id="joke3">
+Your daily task: Drink water, laugh a little,
+and don't forget how amazing you are! 💖
+</div>
+</div>
+</div>
+
+<div class="panel center">
+<h2>Need some random happiness?</h2>
+<button onclick="randomMessage()">Click Me 🎲</button>
+<p id="random" aria-live="polite"></p>
+</div>
+
+<div class="center">
+<a class="btn" href="friendship.html">Friendship Page →</a>
+</div>
+</main>
+
+<footer>100% nonsense. 100% smiles. 😂</footer>
+<script src="script.js"></script>
+<script>
+function randomMessage(){
+ const messages=[
+ "Shalu, smile! You look better when you're happy. 🌸",
+ "Breaking news: Someone deserves a treat today! 🍫",
+ "Achievement unlocked: You made it to this page! 🏆",
+ "Today's forecast: 99% chance of laughter! 😂",
+ "A reminder that you're appreciated. 💖"
+ ];
+ document.getElementById("random").textContent=
+ messages[Math.floor(Math.random()*messages.length)];
+ hearts(12);
+}
+</script>
+</body>
+</html>

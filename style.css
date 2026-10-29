@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap');
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  color:#fff;
+  min-height:100vh;
+  background:linear-gradient(135deg,#251044,#6b287d,#d94f87);
+  background-attachment:fixed;
+}
+nav{
+  display:flex;justify-content:center;flex-wrap:wrap;
+  gap:6px;padding:14px 6px;
+  background:#200b2de8;position:sticky;top:0;z-index:10;
+}
+nav a{
+  color:white;text-decoration:none;font-size:12px;
+  padding:8px 10px;border-radius:20px;transition:.3s;
+}
+nav a:hover{background:#ff8fba;color:#351044}
+main{width:min(92%,850px);margin:auto}
+.hero{
+  min-height:65vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:35px 10px;
+}
+h1{font-size:clamp(36px,8vw,65px);line-height:1.15}
+h2{color:#ffd2e6}
+.script{font-family:Pacifico,cursive;color:#ffd2e6}
+p{line-height:1.8}
+.panel,.tile{
+  padding:24px;margin:18px 0;border-radius:22px;
+  background:#ffffff15;border:1px solid #ffffff44;
+  box-shadow:0 12px 35px #16072040;
+  backdrop-filter:blur(8px);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
+}
+.tile{cursor:pointer;transition:.3s}
+.tile:hover{transform:translateY(-6px) rotate(-1deg);background:#ffffff24}
+.emoji{font-size:40px}
+button,.btn{
+  display:inline-block;margin:8px 4px;padding:13px 22px;
+  border:0;border-radius:30px;background:#ffd2e6;
+  color:#44134d;font-weight:bold;text-decoration:none;
+  cursor:pointer;transition:.25s;font-family:inherit;
+}
+button:hover,.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px #ffd2e677;
+}
+.center{text-align:center}
+.secret{display:none;animation:appear .5s ease}
+.secret.show{display:block}
+.heart{
+  position:fixed;bottom:-35px;z-index:100;
+  pointer-events:none;animation:floatUp 2.5s linear forwards;
+  font-size:25px;
+}
+footer{text-align:center;padding:30px 10px;color:#ffe0ee;font-size:13px}
+@keyframes floatUp{
+  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+@keyframes appear{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:480px){
+  nav{gap:2px}
+  nav a{font-size:10px;padding:7px}
+  .panel,.tile{padding:18px}
+}
